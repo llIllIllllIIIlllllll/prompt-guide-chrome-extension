@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h1 {
+      margin: 0;
+      color: #4CAF50;
+      font-size: 18px;
+    }
+    
+    .section {
+      margin-bottom: 15px;
+    }
+    
+    .section h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+      font-size: 14px;
+    }
+    
+    .btn {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-primary {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #45a049;
+    }
+    
+    .btn-secondary {
+      background-color: #2196F3;
+      color: white;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #1976D2;
+    }
+    
+    .tips {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    
+    .tips ul {
+      margin: 5px 0;
+      padding-left: 15px;
+    }
+    
+    .status {
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    
+    .status.active {
+      background-color: #d4edda;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>✨ Prompt Guide Assistant</h1>
+    <p style="margin: 5px 0; font-size: 12px; color: #666;">Improve your prompts with AI best practices</p>
+  </div>
+
+  <div class="section">
+    <h3>🚀 Quick Actions</h3>
+    <button class="btn btn-primary" id="analyzePrompt">Analyze Current Prompt</button>
+    <button class="btn btn-primary" id="improvePrompt">Suggest Improvements</button>
+  </div>
+
+  <div class="section">
+    <h3>📝 Templates</h3>
+    <button class="btn btn-secondary" id="taskTemplate">Task-Based Prompt</button>
+    <button class="btn btn-secondary" id="creativeTemplate">Creative Prompt</button>
+    <button class="btn btn-secondary" id="analysisTemplate">Analysis Prompt</button>
+    <button class="btn btn-secondary" id="codeTemplate">Code Generation</button>
+  </div>
+
+  <div class="section">
+    <h3>💡 Best Practices</h3>
+    <div class="tips">
+      <ul>
+        <li><strong>Be Specific:</strong> Clear goals get better results</li>
+        <li><strong>Add Context:</strong> Background helps AI understand</li>
+        <li><strong>Use Examples:</strong> Show what you want</li>
+        <li><strong>Specify Format:</strong> Define output structure</li>
+        <li><strong>Break Down:</strong> Complex tasks into steps</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>⚙️ Settings</h3>
+    <button class="btn btn-secondary" id="toggleHelper">Toggle Helper Button</button>
+    <button class="btn btn-secondary" id="resetSettings">Reset to Defaults</button>
+  </div>
+
+  <div class="status active">
+    <span id="statusText">✅ Extension Active</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
