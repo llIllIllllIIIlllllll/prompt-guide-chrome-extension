@@ -1,0 +1,222 @@
+/* Prompt Guide Assistant - Styles */
+
+.prompt-guide-helper {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+  color: white !important;
+  padding: 12px 18px !important;
+  border-radius: 25px !important;
+  cursor: pointer !important;
+  z-index: 10000 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+  outline: none !important;
+  user-select: none !important;
+}
+
+.prompt-guide-helper:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4) !important;
+  background: linear-gradient(135deg, #45a049, #4CAF50) !important;
+}
+
+.prompt-guide-modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  z-index: 10001 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.prompt-guide-modal-content {
+  background: white !important;
+  padding: 30px !important;
+  border-radius: 12px !important;
+  max-width: 600px !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+  animation: modalSlideIn 0.3s ease-out !important;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.prompt-guide-modal h2 {
+  margin: 0 0 20px 0 !important;
+  color: #333 !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+.prompt-guide-modal h3 {
+  margin: 20px 0 10px 0 !important;
+  color: #555 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+/* Button Styles */
+.prompt-options {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.prompt-btn {
+  padding: 12px 16px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #2196F3, #1976D2) !important;
+  color: white !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+  margin: 5px !important;
+}
+
+.prompt-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3) !important;
+}
+
+.prompt-btn:active {
+  transform: translateY(0) !important;
+}
+
+.template-btn {
+  padding: 10px 14px !important;
+  margin: 4px !important;
+  border: 2px solid #4CAF50 !important;
+  border-radius: 6px !important;
+  background: white !important;
+  color: #4CAF50 !important;
+  cursor: pointer !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.template-btn:hover {
+  background: #4CAF50 !important;
+  color: white !important;
+}
+
+/* Tips Section */
+.prompt-tips {
+  background: #f8f9fa !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  border-left: 4px solid #4CAF50 !important;
+}
+
+.prompt-tips ul {
+  margin: 8px 0 !important;
+  padding-left: 20px !important;
+  color: #555 !important;
+  line-height: 1.5 !important;
+}
+
+.prompt-tips li {
+  margin-bottom: 6px !important;
+  font-size: 14px !important;
+}
+
+/* Close Button */
+#close-modal {
+  margin-top: 20px !important;
+  padding: 12px 24px !important;
+  background: linear-gradient(135deg, #f44336, #d32f2f) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+#close-modal:hover {
+  background: linear-gradient(135deg, #d32f2f, #f44336) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Input Highlight */
+.prompt-guide-highlight {
+  box-shadow: 0 0 0 2px #4CAF50 !important;
+  border-radius: 4px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .prompt-guide-modal-content {
+    margin: 20px !important;
+    padding: 20px !important;
+    max-width: calc(100% - 40px) !important;
+  }
+  
+  .prompt-options {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .prompt-guide-helper {
+    top: 10px !important;
+    right: 10px !important;
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .prompt-guide-modal-content {
+    background: #2d2d2d !important;
+    color: #ffffff !important;
+  }
+  
+  .prompt-guide-modal h2,
+  .prompt-guide-modal h3 {
+    color: #ffffff !important;
+  }
+  
+  .prompt-tips {
+    background: #3d3d3d !important;
+    color: #cccccc !important;
+  }
+  
+  .prompt-tips ul {
+    color: #cccccc !important;
+  }
+  
+  .template-btn {
+    background: #2d2d2d !important;
+    border-color: #4CAF50 !important;
+    color: #4CAF50 !important;
+  }
+}
